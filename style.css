@@ -1,0 +1,168 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background:#f6f1ea;
+    color:#333;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+    align-items:center;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav .logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+nav .logo span{
+    color:#b5651d;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+}
+
+nav ul li{
+    list-style:none;
+}
+
+nav ul a{
+    text-decoration:none;
+    font-size:18px;
+    color:#444;
+}
+
+nav ul a.active{
+    color:#b5651d;
+    font-weight:600;
+}
+
+/* HERO SECTION */
+.hero{
+    height:90vh;
+    background:url("images/coffee-bg.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding-left:80px;
+}
+
+.hero-text{
+    max-width:450px;
+}
+
+.hero-text h1{
+    font-size:50px;
+    color:#fff;
+}
+
+.hero-text p{
+    margin:15px 0;
+    font-size:18px;
+    color:#eee;
+}
+
+.btn{
+    background:#b5651d;
+    padding:12px 25px;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* ABOUT */
+.about{
+    padding:60px;
+    text-align:center;
+}
+
+/* MENU PAGE - horizontal scroll */
+.menu-page{
+    padding:50px;
+    text-align:center;
+}
+
+.menu-container{
+    display:flex;
+    overflow-x:auto; /* Horizontal scroll */
+    gap:20px;
+    padding:20px 0;
+    scroll-behavior:smooth;
+}
+
+.menu-container::-webkit-scrollbar{
+    height:8px;
+}
+
+.menu-container::-webkit-scrollbar-thumb{
+    background:#b5651d;
+    border-radius:4px;
+}
+
+.card{
+    flex:0 0 200px; /* Fixed width for horizontal layout */
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+}
+
+
+
+/* CONTACT PAGE */
+.contact{
+    padding:50px;
+    text-align:center;
+}
+
+form{
+    width:350px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+form input, form textarea{
+    padding:10px;
+    border:1px solid #aaa;
+    border-radius:5px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+    .hero{
+        padding-left:20px;
+    }
+    .hero-text h1{
+        font-size:35px;
+    }
+}
